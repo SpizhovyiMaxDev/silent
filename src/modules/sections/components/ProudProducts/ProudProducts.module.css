@@ -1,0 +1,15 @@
+
+
+.productsTitle{
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 4.4rem;
+    margin:0 0 8rem;
+}
+
+@media (max-width: 55em){
+    .productsTitle{
+        font-size: 3.3rem;
+        margin: 0 0 4rem;
+    }
+}

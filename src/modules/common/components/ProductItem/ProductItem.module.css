@@ -1,0 +1,45 @@
+.card{
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.128);
+    padding: 2rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardImageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:2rem;
+}
+
+.cardImage{
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    padding: 2rem 1rem;
+}
+
+.cardTitle{
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 0 1rem;
+}
+
+.cardRating{
+    font-size: 1.4rem;
+    font-family: "Inter";
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+
+
+.cardPrice{
+    font-size: 2rem;
+    font-family: "Inter";
+    font-weight: 500;
+    color: #333;
+}

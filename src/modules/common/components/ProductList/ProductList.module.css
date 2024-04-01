@@ -1,0 +1,25 @@
+.productList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:2rem;
+}
+
+
+@media (max-width: 51.5em){
+    .productList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 40.5em){
+    .productList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 28em){
+    .productList{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,124 @@
+.navbar{
+    padding: 3.5rem 4.6rem;
+    font-family: "Inter";
+    font-weight: 600;
+}
+
+.navbarContainer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotype {
+    font-size: 3.2rem;
+    color: #389a1d;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbarList{
+    font-size: 1.6rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.navbarItem{
+    text-decoration: none;
+    color: #000;
+}
+
+.cartButton{
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 1rem 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.cartSpan {
+    background-color: rgb(172, 40, 40);   
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 35px; 
+    height: 35px;
+}
+
+.navbarMobile{
+    display: none;
+}
+
+@media (max-width:42em){
+    .navbarMobile{
+        display: block;
+    }    
+
+    .navbarList{
+        font-size: 2rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 0.2s ease-in-out;
+        
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .btnShowNav, 
+    .btnCloseNav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        color: #000;
+        border: none;
+        padding: 1rem;
+        font-size: 4.4rem;
+    }
+
+
+    .showMobileNav .navbarList{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .showMobileNav .btnShowNav{
+        display: none;
+    }
+
+    .showMobileNav .btnCloseNav{
+        display: flex;
+    }
+
+    .btnCloseNav{
+        display: none;
+    }
+}
+
+

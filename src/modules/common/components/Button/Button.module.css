@@ -1,0 +1,26 @@
+
+.cta--green:link,
+.cta--green:visited{
+    color: #fff;
+    background:#389a1d;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: "Inter";
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    transition: background 0.5s;
+}
+
+.cta--green:hover,
+.cta--green:active{
+    background: #306832;
+
+}
+
+@media (max-width: 55em){
+    .cta--green:link,
+    .cta--green:visited{
+        font-size: 1.4rem;
+    }
+}

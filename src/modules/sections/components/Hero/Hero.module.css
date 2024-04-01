@@ -1,0 +1,63 @@
+
+.heroContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroBox{
+    flex:1;
+    padding: 2rem;
+}
+
+.heroImage{
+    width:100%;
+    height: auto;
+}
+
+.heroTitle{
+    font-family: "Roboto Condensed";
+    font-size: 5.5rem;
+    width: 70%;
+    margin-bottom: 2rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.heroDescription{
+    width: 85%;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: "Inter";
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 55em){
+    .heroTitle{
+        font-size: 4.4rem;
+        width: 100%;
+    }
+
+    .heroDescription{
+        font-size: 1.6rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 40.5em){
+    .heroImage{
+     display: none;   
+    }
+
+    .heroContainer{
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media (max-width: 28em){
+    .heroTitle{
+        font-size: 3.6rem;
+    }
+}

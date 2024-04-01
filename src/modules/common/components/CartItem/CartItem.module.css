@@ -1,0 +1,78 @@
+.cartItem{
+    min-height: 20rem;
+    padding: 3rem 2rem; 
+    border-bottom: 1px solid #bdbdbd;
+    display: flex;
+    gap: 4rem;
+}
+
+.cartImageContainer{
+    display: flex;
+    align-items: center;
+}
+
+.cartItemContent{
+    flex: 4;
+}
+
+.cartItemImage {
+    max-width: 15rem;
+    height: auto;
+}
+
+.cartTitle {
+    cursor: pointer;
+    font: 2rem "Inter";
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin: 0 0 0.5rem;
+}
+
+.cartQuantity{
+    font: 1.6rem "Inter";
+    color: #333;
+    margin: 0 0 2rem;
+}
+
+.cartRating{
+    font: 1.8rem "Inter";
+    color: #333;
+    margin: 0 0 1rem;
+}
+
+.cartPricingBox{
+    flex:1;
+    text-align: right;
+}
+
+.cartPrice{
+    font: 1.8rem "Inter";
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+span{
+    display: block;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 35em){
+    .cartItem{
+        flex-direction: column;
+        gap:3rem;
+    }
+
+    .cartPrice{
+        text-align: left;
+        font-size: 2.4rem;
+    }    
+    
+    span{
+        margin: 2rem 0 0;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,89 @@
+.product {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.productContainer {
+    width: 100%;
+}
+
+.productBox {
+    display: flex;
+    justify-content: center;
+}
+
+.productImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productImage {
+    width: 45%;
+    height: auto;
+}
+
+.productContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productSubheading {
+    font: 500 2rem "Roboto Condensed";
+    color: #7D7D7D;
+    letter-spacing: .5px;
+    margin: 0 0 2rem;
+}
+
+.productTitle {
+    font: 3.2rem "Roboto Condensed";
+    margin: 0 0 2rem;
+}
+
+.productRating {
+    font: 2rem "Roboto Condensed";
+    margin: 0 0 1rem;
+    color: #333;
+}
+
+.productPrice {
+    font: 700 3rem "Inter";
+    margin: 0 0 2rem;
+    letter-spacing: -1px;
+}
+
+.productDescription {
+    font: 1.6rem "Inter";
+    color: #333;
+    line-height: 1.5;
+    margin: 0 0 2rem;
+}
+
+
+@media (max-width: 55em) {
+    .productTitle {
+        font-size: 2.4rem;
+        margin: 0 0 1rem;
+    }
+
+    .productPrice {
+        font-size: 2.4rem;
+    }
+
+}
+
+@media (max-width: 42em) {
+    .productImage {
+        width: 60%;
+    }
+
+    .productBox {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+

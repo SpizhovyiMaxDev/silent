@@ -1,0 +1,105 @@
+.cart{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/*--Empty-Cart--*/
+.emptyCart{
+    min-height: 40rem;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    padding: 4rem;
+}
+
+.emptyCartImage{
+    width: 100%;
+    height: auto;
+}
+
+.emptyCartImageBox{
+    flex: 1.5;
+}
+
+.emptyCartMessage{
+    flex: 2;
+    font: 3.6rem "Roboto Condensed";
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/*--Cart--*/
+.cartSubtotal{
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+}
+
+.cartSubtotalBox{
+    display:flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.totalPrice{
+    font-size: 2.4rem;
+    font-family: "Inter";
+}
+
+.cartBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    padding: 2rem;
+}
+
+.priceHeading{
+    font: 1.8rem "Inter";
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.cartHeading{
+    font: 3.2rem "Inter";
+    font-weight: 600;
+}
+
+@media (max-width: 51.5em){
+    .emptyCartMessage{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 40.5em){
+    .emptyCart{
+        flex-direction: column;
+        text-align: center;
+        gap:0rem;
+    }    
+}
+
+@media (max-width: 35em){
+    .priceHeading{
+        display: none;
+    }
+    
+    .emptyCartMessage{
+        font-size: 2.4rem;
+    }
+
+    .cartSubtotal{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:2rem;
+    }
+
+    .cartSubtotalBox{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}

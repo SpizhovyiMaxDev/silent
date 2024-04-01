@@ -1,0 +1,29 @@
+
+.footer{
+    background-color: #000;
+    margin-bottom: auto;
+}
+
+.footerList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:9rem;
+    flex-wrap: wrap;
+}
+
+.footerLink:link,
+.footerLink:visited{
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-family: "Inter";
+    color: #fff;
+    font-weight: 500;
+}
+
+@media (max-width: 42em){
+    .footerList{
+        flex-direction: column;
+        gap:3rem;
+    }
+}

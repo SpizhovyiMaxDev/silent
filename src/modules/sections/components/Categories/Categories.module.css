@@ -1,0 +1,55 @@
+.categories{
+    min-height:80vh;
+}
+
+.categoriesTitle{
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: "Inter";
+    font-weight: 600;
+    margin: 0 0 2rem;
+}
+
+.divider{
+    color: #000;
+}
+
+.categoriesList{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    padding:  2rem 0;
+    gap:2rem;
+    margin-bottom: 4rem;
+}
+
+.categoryButton{
+    background-color:#fff;
+    border: 1px solid #333;
+    color: #333;
+    padding: 1rem 3rem;
+    font-size:2rem;
+    font-family: "Inter";
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.categoryButton:hover,
+.categoryButton:focus{
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 42em){
+    .categoriesList{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 30.5em){
+    .categoryButton{
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+    }
+}
