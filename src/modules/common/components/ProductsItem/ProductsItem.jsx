@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import styles from './ProductItem.module.css'
+import styles from './ProductsItem.module.css'
 
 
-function ProductItem({product}){
+function ProductsItem({product}){
      const navigate = useNavigate();
 
     return (
@@ -27,4 +27,4 @@ function ProductItem({product}){
 }
 
 
-export default ProductItem;
+export default ProductsItem;

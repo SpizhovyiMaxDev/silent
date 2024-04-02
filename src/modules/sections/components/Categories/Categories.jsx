@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useApp } from "../../../../context/AppContext";
 import Container from "../../../common/components/Container/Container";
-import ProductList from "../../../common/components/ProductList/ProductList";
+import ProductsList from "../../../common/components/ProductsList/ProductsList"
 import Loader from "../../../common/components/Loader/Loader"
 import styles from './Categories.module.css';
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
@@ -42,7 +42,7 @@ function Categories() {
                 }
 
                 {status === "error" && <ErrorMessage message = {error} />}
-                <ProductList products={updatedProducts} />
+                <ProductsList products={updatedProducts} />
             </Container>
         </section>
     );

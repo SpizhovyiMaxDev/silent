@@ -1,7 +1,7 @@
 import { useApp }  from "../../../../context/AppContext"
 import Container from "../../../common/components/Container/Container"
 import styles from './ProudProducts.module.css'
-import ProductList from "../../../common/components/ProductList/ProductList"
+import ProductsList from "../../../common/components/ProductsList/ProductsList"
 import Loader from "../../../common/components/Loader/Loader";
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage"
 
@@ -17,7 +17,7 @@ function ProudProducts(){
                 {status === "ready" && (
                     <>
                         <h2 className={styles.productsTitle}>Products we proud of</h2>
-                        <ProductList products={bestProducts} />
+                        <ProductsList products={bestProducts} />
                     </>
                 )}
                 {status === "error" && <ErrorMessage message = {error} /> }

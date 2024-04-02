@@ -11,7 +11,7 @@
 }
 
 .divider{
-    color: #000;
+    color: var(--color-black);
 }
 
 .categoriesList{
@@ -25,9 +25,9 @@
 }
 
 .categoryButton{
-    background-color:#fff;
-    border: 1px solid #333;
-    color: #333;
+    background-color:var(--color-white);
+    border: 1px solid var(--color-gray-dark);
+    color: var(--color-gray-dark);
     padding: 1rem 3rem;
     font-size:2rem;
     font-family: "Inter";
@@ -37,8 +37,8 @@
 
 .categoryButton:hover,
 .categoryButton:focus{
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
 }
 
 @media (max-width: 42em){

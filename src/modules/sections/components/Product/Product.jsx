@@ -31,13 +31,13 @@ function Product({products, error, status}){
                                 {product.title}
                             </h2>
                             <p className={styles.productRating}>
-                              Rating {product.rating.rate}
+                                Rating: {product.rating.rate} <ion-icon name="star" style={{ color: '#ff8400' }}></ion-icon>
                             </p>
                             <p className={styles.productPrice}>
-                             {product.price}$
+                                {product.price}$
                             </p>
                             <p className={styles.productDescription}>
-                             {product.description}
+                                {product.description}
                             </p>
 
                             <Productquant product = {product}/>

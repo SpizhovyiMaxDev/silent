@@ -35,7 +35,7 @@ function Navbar(){
                     </li>
                 </ul>
 
-                <div className = {styles.navbarMobile}>
+                <div className = {styles.btnContainer}>
                     <button className = {styles.btnShowNav} onClick = {() => setNavState(true)} aria-label="Navbar button handle menu">
                         <ion-icon name="menu-outline"></ion-icon>
                     </button>

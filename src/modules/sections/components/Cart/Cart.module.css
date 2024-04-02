@@ -28,7 +28,7 @@
     font: 3.6rem "Roboto Condensed";
     font-weight: 700;
     letter-spacing: 1px;
-    color: #333;
+    color: var(--color-gray-dark);
 }
 
 /*--Cart--*/
@@ -46,15 +46,14 @@
 }
 
 .totalPrice{
-    font-size: 2.4rem;
-    font-family: "Inter";
+    font: 2.4rem "Inter";
 }
 
 .cartBox{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid var(--color-gray-medium);
     padding: 2rem;
 }
 

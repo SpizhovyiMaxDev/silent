@@ -1,11 +1,10 @@
 .loader{
-    font-size: 4rem;
-    font-family:"Inter";
+    font: 4.4rem "Inter";
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap:1rem;
     justify-content: center;
+    gap:1rem;
 }
 
 @keyframes spin {

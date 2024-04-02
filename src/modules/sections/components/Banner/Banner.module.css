@@ -16,7 +16,7 @@
 }
 
 .bannerContent{
-    background-color: #e9e9e948;
+    background-color: var(--color-gray-light);
     padding: 4rem 3rem;
     display: flex;
     align-items: flex-start;
@@ -29,14 +29,14 @@
 .bannerTitle{
     font-size: 3rem;
     font-family: "Roboto Condensed";
-    color:#000;
+    color:var(--color-black);
 }
 
 .bannerDescription{
     font-family: "Inter";
     font-size: 1.8rem;
     line-height: 1.5;
-    color:#333;
+    color:var(--color-gray-dark);
 }
 
 @media (max-width: 40.5em){

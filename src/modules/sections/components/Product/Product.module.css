@@ -34,7 +34,7 @@
 
 .productSubheading {
     font: 500 2rem "Roboto Condensed";
-    color: #7D7D7D;
+    color: var(--color-gray);
     letter-spacing: .5px;
     margin: 0 0 2rem;
 }
@@ -47,7 +47,7 @@
 .productRating {
     font: 2rem "Roboto Condensed";
     margin: 0 0 1rem;
-    color: #333;
+    color: var(--color-gray-dark);
 }
 
 .productPrice {
@@ -58,7 +58,7 @@
 
 .productDescription {
     font: 1.6rem "Inter";
-    color: #333;
+    color: var(--color-gray-dark);
     line-height: 1.5;
     margin: 0 0 2rem;
 }

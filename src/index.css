@@ -7,13 +7,22 @@
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
---- 05 SHADOWS
+- Font sizes (rem)
+1.0 / 1.2 / 1.4 / 1.6 / 1.8 / 2.0 / 2.4 / 3.0 / 3.6 / 4.4 / 5.2 / 6.2 / 7.4 / 8.6 / 9.8
+
+- Spacing system (rem)
+0.2 / 0.4 / 0.8 / 1.2 / 1.6 / 2.4 / 3.2 / 4.8 / 6.4 / 8.0 / 9.6 / 12.8
+
+--- 05 SHADOWS * Default
 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- 06 BORDER-RADIUS
 
 Default: 9px
 Medium: 11px
+-- or any other that matches 
+
+Max Spizhovyi
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -35,6 +44,22 @@ body{
   overflow-x: hidden;
 }
 
+:root {
+  --color-white: #fff;
+  --color-green-dark: #306832;
+  --color-green-light: #389a1d;
+  --color-black: #000;
+  --color-gray-dark: #333;
+  --color-gray-light: #e9e9e948;
+  --color-gray-medium: #bdbdbd;
+  --color-red: #ac2828;
+  --color-white-transparent: #ffffffe6;
+  --color-gray: #7D7D7D;
+  --color-shadow:#00000021;
+  --color-metal: #272525;
+}
+
+
 @media (max-width: 72em){
   html{
     font-size:50%;
@@ -47,12 +72,14 @@ body{
   width: 100%;
 } 
 
-section, footer{
+section, 
+footer{
   padding: 9.8rem 4.6rem;
 }
 
 @media (max-width: 26em){
-  section, footer{
+  section, 
+  footer{
     padding: 9.8rem 2.3rem;
   }
 }

@@ -1,5 +1,5 @@
 .card{
-    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.128);
+    box-shadow: 0 0 0.5rem 0.1rem var(--color-shadow);
     padding: 2rem;
     cursor: pointer;
     display: flex;
@@ -25,7 +25,7 @@
     font-family: "Inter";
     font-weight: 600;
     font-size: 1.6rem;
-    color: #333;
+    color: var(--color-gray-dark);
     margin: 0 0 1rem;
 }
 
@@ -38,8 +38,7 @@
 
 
 .cardPrice{
-    font-size: 2rem;
-    font-family: "Inter";
+    font: 2rem "Inter";
     font-weight: 500;
-    color: #333;
+    color: var(--color-gray-dark);
 }
