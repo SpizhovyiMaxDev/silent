@@ -1,5 +1,5 @@
-import Container from '../../../common/components/Container/Container';
 import styles from './Footer.module.css'
+import Container from '../../../common/components/Container/Container';
 
 
 function Footer(){

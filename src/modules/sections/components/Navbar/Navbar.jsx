@@ -1,8 +1,10 @@
-import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css'
-import Container from "../../../common/components/Container/Container"
+
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import { useApp } from '../../../../context/AppContext';
+import Container from "../../../common/components/Container/Container"
 
 function Navbar(){
     const [navState, setNavState] = useState(false);

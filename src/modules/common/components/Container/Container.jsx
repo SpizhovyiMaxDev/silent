@@ -1,3 +1,4 @@
+import styles from './Container.module.css'
 
 function Container({children, className = ""}){
     return (

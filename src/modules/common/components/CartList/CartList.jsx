@@ -1,5 +1,5 @@
-import CartItem from '../../../common/components/CartItem/CartItem'
 import styles from './CartList.module.css'
+import CartItem from '../../../common/components/CartItem/CartItem'
 
 function CartList({list, updateCart}){
     return (

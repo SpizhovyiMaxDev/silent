@@ -6,3 +6,10 @@
     justify-content: center;
     gap:1rem;
 }
+
+@media (max-width:35em){
+    .errorMessage{
+        font-size: 2.4rem;
+
+    }
+}

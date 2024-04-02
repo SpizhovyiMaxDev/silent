@@ -1,10 +1,11 @@
 import styles from './Product.module.css';
+
 import { memo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 import Loader from '../../../common/components/Loader/Loader';
 import Container from '../../../common/components/Container/Container';
 import ErrorMessage from '../../../common/components/ErrorMessage/ErrorMessage';
-import { useSearchParams } from 'react-router-dom';
 import Productquant from '../../../common/components/Productquant/Productquant';
 
 function Product({products, error, status}){

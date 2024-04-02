@@ -39,7 +39,7 @@
     color:var(--color-gray-dark);
 }
 
-@media (max-width: 40.5em){
+@media (max-width: 42em){
     .bannerImageContainer{
         display: none;
     }

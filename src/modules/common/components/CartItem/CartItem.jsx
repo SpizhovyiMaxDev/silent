@@ -1,5 +1,5 @@
-import { Link, useNavigate } from 'react-router-dom';
 import styles from './CartItem.module.css'
+import { Link, useNavigate } from 'react-router-dom';
 
 function CartItem({list, item, updateCart}){
     const navigate = useNavigate();

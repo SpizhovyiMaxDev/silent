@@ -1,9 +1,11 @@
+import styles from './Categories.module.css';
+
 import { useState } from "react";
 import { useApp } from "../../../../context/AppContext";
+
+import Loader from "../../../common/components/Loader/Loader"
 import Container from "../../../common/components/Container/Container";
 import ProductsList from "../../../common/components/ProductsList/ProductsList"
-import Loader from "../../../common/components/Loader/Loader"
-import styles from './Categories.module.css';
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
 
 

@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import styles from './ProductsItem.module.css'
+import { useNavigate } from 'react-router-dom';
 
 
 function ProductsItem({product}){

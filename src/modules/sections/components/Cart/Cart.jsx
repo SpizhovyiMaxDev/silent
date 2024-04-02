@@ -1,9 +1,11 @@
+import styles from './Cart.module.css';
+
 import { useApp } from '../../../../context/AppContext';
+
+import Button from '../../../common/components/Button/Button';
 import Container from '../../../common/components/Container/Container';
 import ErrorMessage from '../../../common/components/ErrorMessage/ErrorMessage';
 import CartList from '../../../common/components/CartList/CartList';
-import Button from '../../../common/components/Button/Button';
-import styles from './Cart.module.css';
 
 function Cart() {
     const { updateCart, cart, error, status } = useApp();

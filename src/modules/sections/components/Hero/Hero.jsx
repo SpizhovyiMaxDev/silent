@@ -1,7 +1,7 @@
+import styles from './Hero.module.css';
 
 import Button from '../../../common/components/Button/Button';
 import Container from '../../../common/components/Container/Container';
-import styles from './Hero.module.css';
 
 function Hero() {
     return (

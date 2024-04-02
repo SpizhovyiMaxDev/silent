@@ -1,6 +1,5 @@
-
 .footer{
-    background-color: #000;
+    background-color: var(--color-black);
     margin-bottom: auto;
 }
 
@@ -14,10 +13,9 @@
 
 .footerLink:link,
 .footerLink:visited{
-    font-size: 1.8rem;
+    font: 1.8rem "Inter";
     text-decoration: none;
-    font-family: "Inter";
-    color: #fff;
+    color: var(--color-white);
     font-weight: 500;
 }
 

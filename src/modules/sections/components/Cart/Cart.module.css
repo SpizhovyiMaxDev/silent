@@ -68,13 +68,13 @@
     font-weight: 600;
 }
 
-@media (max-width: 51.5em){
+@media (max-width: 55em){
     .emptyCartMessage{
         font-size: 3rem;
     }
 }
 
-@media (max-width: 40.5em){
+@media (max-width: 42em){
     .emptyCart{
         flex-direction: column;
         text-align: center;

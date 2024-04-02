@@ -5,13 +5,13 @@
 }
 
 
-@media (max-width: 51.5em){
+@media (max-width: 55em){
     .productList{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 40.5em){
+@media (max-width: 42em){
     .productList{
         grid-template-columns: repeat(2, 1fr);
     }

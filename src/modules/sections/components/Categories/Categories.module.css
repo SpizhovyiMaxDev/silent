@@ -47,9 +47,10 @@
     }
 }
 
-@media (max-width: 30.5em){
+@media (max-width: 35em){
     .categoryButton{
         font-size: 1.5rem;
         padding: 1rem 1.5rem;
     }
 }
+

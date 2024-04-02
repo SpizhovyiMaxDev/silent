@@ -1,6 +1,7 @@
-import Container from '../../../common/components/Container/Container';
-import Button from '../../../common/components/Button/Button';
 import styles from './Banner.module.css'
+
+import Button from '../../../common/components/Button/Button';
+import Container from '../../../common/components/Container/Container';
 
 function Banner({image, title, description}){
     return (
