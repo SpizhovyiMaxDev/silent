@@ -13,6 +13,9 @@ function Footer(){
             <Container className = {styles.footerContainer}>
                 <ul className={styles.footerList}>
                     <li className={styles.footerListItem}>
+                        <a href = "https://about.com" className={styles.footerLink} onClick={handleClick}>&copy;Copyright by Max Spizhovyi</a>
+                    </li>
+                    <li className={styles.footerListItem}>
                         <a href = "https://about.com" className={styles.footerLink} onClick={handleClick}>About</a>
                     </li>
                     <li className={styles.footerListItem}>
