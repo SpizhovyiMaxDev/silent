@@ -1,20 +1,18 @@
 import styles from './Categories.module.css';
 
-import { useState } from "react";
+// import { useState } from "react";
 import { useApp } from "../../../../context/AppContext";
+import { Link, Outlet } from 'react-router-dom';
 
 import Loader from "../../../common/components/Loader/Loader"
 import Container from "../../../common/components/Container/Container";
-import ProductsList from "../../../common/components/ProductsList/ProductsList"
+// import ProductsList from "../../../common/components/ProductsList/ProductsList"
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
 
 
 
 function Categories() {
-    const { products, status, error } = useApp();
-    const [category, setCategory] = useState("all");
-
-    const updatedProducts = category === "all" ? products : products.filter(product => product.category === category);
+    const { status, error } = useApp();
 
 
     return (
@@ -28,15 +26,14 @@ function Categories() {
                 </h2>
                 <hr className={styles.divider}/> 
                 <ul className={styles.categoriesList}>
-                    {['all', 'jewelery', 'electronics', "men's clothing", "women's clothing"].map((cat) => (
+                    {['all', 'jewelery', 'electronics', "men's-clothing", "women's-clothing"].map((cat) => (
                         <li key={cat} className={styles.categoryItem}>
-                            <button
-                                className={styles.categoryButton}
-                                onClick={() => setCategory(cat)}
-                                aria-label={`Filter by ${cat}`}
+                            <Link
+                                to = {`${cat}`}
+                                className={styles.categoryLink}
                                 >
-                                {cat.slice(0, 1).toUpperCase() + cat.slice(1)}
-                            </button>
+                                {(cat.slice(0, 1).toUpperCase() + cat.slice(1)).replace("-", " ")}
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -44,7 +41,8 @@ function Categories() {
                 }
 
                 {status === "error" && <ErrorMessage message = {error} />}
-                <ProductsList products={updatedProducts} />
+
+                <Outlet />
             </Container>
         </section>
     );

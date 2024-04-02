@@ -1,7 +1,7 @@
 import styles from './Product.module.css';
 
 import { memo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import Loader from '../../../common/components/Loader/Loader';
 import Container from '../../../common/components/Container/Container';
@@ -9,10 +9,8 @@ import ErrorMessage from '../../../common/components/ErrorMessage/ErrorMessage';
 import Productquant from '../../../common/components/Productquant/Productquant';
 
 function Product({products, error, status}){
-    const [params] = useSearchParams();
-    const title = params.get("title");
+    const {id:title} = useParams();
     let product = products.find(p => p.title.includes(title));
-
     
     return (
         <section className={styles.product}> 
