@@ -8,10 +8,34 @@ function Productquant({ product }){
     const {status, updateCart, cart} = useApp();
     const [quantity, setQuantity] = useState(1);
     const currentPrice = status === "ready" ?  round(product.price * quantity) : 0;
-    const [showNotif, setShowNotif] = useState(false);
+    const [{showNotif, message}, setShowNotif] = useState({showNotif: false, message:""});
 
+    // Messages issue!!!!
+    function handleSetQuantity(e){
+        const quantity = +e.target.value;
+        let message = "";
+        
+        if(quantity <= 10 && quantity >= 1){
+            setQuantity(quantity);
+        } else {
+            setShowNotif({showNotif:true, message})
+        }
+        
+        if(quantity>10){
+            message = "Your product quantity should be below or equal 10"
+        }
+
+        if(quantity < 1){
+            message = "Your product quantity should be more or equal 1"
+        }
+
+        setTimeout(function(){
+            setShowNotif({showNotif: false, message});
+        }, 1000);
+    }
 
     function handleAddProduct(){
+        const message = "Product successfuly delivered to the cart ✅";
         const index = cart.findIndex(p => p.title.includes(product.title));
         const updatedCart = [...cart];
 
@@ -27,9 +51,9 @@ function Productquant({ product }){
             };
         }
 
-        setShowNotif(true);
+        setShowNotif({showNotif: true, message});
         setTimeout(function(){
-            setShowNotif(false);
+            setShowNotif({showNotif: false,  message});
         }, 1000);
         
         updateCart(updatedCart);
@@ -38,9 +62,9 @@ function Productquant({ product }){
 
     return (
         <>
-            <p className = {`${styles.notification} ${showNotif ? styles.visible : styles.hidden}`}>Broduct successfuly delivered to the cart ✅</p>
+            <p className = {`${styles.notification} ${showNotif ? styles.visible : styles.hidden}`}>{message}</p>
             <div className={styles.productQuant}>
-                <input type="number" id="quantity" name="quantity" min="1" max="10" value={quantity} className={styles.input} onChange={(e) => setQuantity(+e.target.value)}/>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" className={styles.input} onChange={handleSetQuantity}/>
                 <p className={styles.productQuantPrice}>  
                    Total: {currentPrice}$
                 </p>

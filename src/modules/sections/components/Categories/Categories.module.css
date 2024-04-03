@@ -29,18 +29,20 @@
     border: 1px solid var(--color-gray-dark);
     color: var(--color-gray-dark);
     text-decoration: none;
-    padding: 1rem 3rem;
     display: inline-block;
+    padding: 1rem 3rem;
     font: 2rem "Inter";
     font-weight: 500;
     transition: all 0.2s;
 }
 
 .categoryLink:hover,
-.categoryLink:active{
+.categoryLink:active,
+.categoriesList a:global(.active){
     background-color: var(--color-gray-dark);
     color: var(--color-white);
 }
+
 
 @media (max-width: 42em){
     .categoriesList{
@@ -49,8 +51,9 @@
 }
 
 @media (max-width: 35em){
-    .categoryButton{
-        font-size: 1.5rem;
+    .categoryLink:link,
+    .categoryLink:visited{
+        font-size: 1.6rem;
         padding: 1rem 1.5rem;
     }
 }

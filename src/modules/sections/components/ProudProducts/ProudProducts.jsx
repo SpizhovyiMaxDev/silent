@@ -6,8 +6,7 @@ import Loader from "../../../common/components/Loader/Loader";
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
 
 function ProudProducts(){
-    const {products, status, error} = useApp();
-    const bestProducts = products.slice().reverse().slice(0, 8)
+    const {status, error} = useApp();
     
 
     return (
@@ -17,7 +16,7 @@ function ProudProducts(){
                 {status === "ready" && (
                     <>
                         <h2 className={styles.productsTitle}>Products we proud of</h2>
-                        <ProductsList products={bestProducts} />
+                        <ProductsList type = {"mixed"} />
                     </>
                 )}
                 {status === "error" && <ErrorMessage message = {error} /> }

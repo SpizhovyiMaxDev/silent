@@ -5,7 +5,15 @@ import { useApp } from '../../../../context/AppContext';
 
 function ProductsList({type}){
     const { products } = useApp();
-    const productsFiltered = type === "all" ? products : products.filter(product => product.category === type);
+    let productsFiltered;
+
+    if(type === "mixed"){
+        productsFiltered = products.slice().reverse().slice(0, 8);
+    }else if(type === "all"){
+        productsFiltered = products;
+    }else{
+        productsFiltered = products.filter(product => product.category === type);
+    }
 
     return (
         <div className = {styles.productList}>

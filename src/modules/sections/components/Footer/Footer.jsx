@@ -3,7 +3,6 @@ import Container from '../../../common/components/Container/Container';
 
 
 function Footer(){
-
     function handleClick(e){
         e.preventDefault()
     }

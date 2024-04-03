@@ -26,9 +26,15 @@
 
 }
 
-.navbarItem{
+.navbarItem:link, 
+.navbarItem:visited{
     text-decoration: none;
     color: var(--color-black);
+}
+
+.navbarItem:hover,
+.navbarItem:active{
+    text-decoration: underline var(--color-black);
 }
 
 .cartButton{

@@ -1,19 +1,16 @@
 import styles from './Categories.module.css';
 
-// import { useState } from "react";
 import { useApp } from "../../../../context/AppContext";
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import Loader from "../../../common/components/Loader/Loader"
 import Container from "../../../common/components/Container/Container";
-// import ProductsList from "../../../common/components/ProductsList/ProductsList"
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
 
 
 
 function Categories() {
     const { status, error } = useApp();
-
 
     return (
         <section className={styles.categories}>
@@ -22,18 +19,18 @@ function Categories() {
                 {status === "ready" && 
                 <>
                 <h2 className={styles.categoriesTitle}>
-                    Latest Products
+                    Our Collection
                 </h2>
                 <hr className={styles.divider}/> 
                 <ul className={styles.categoriesList}>
-                    {['all', 'jewelery', 'electronics', "men's-clothing", "women's-clothing"].map((cat) => (
-                        <li key={cat} className={styles.categoryItem}>
-                            <Link
-                                to = {`${cat}`}
+                    {['all', 'jewelery', 'electronics', "men's-clothing", "women's-clothing"].map((category) => (
+                        <li key={category} className={styles.categoryItem}>
+                            <NavLink
+                                to = {`${category}`}
                                 className={styles.categoryLink}
                                 >
-                                {(cat.slice(0, 1).toUpperCase() + cat.slice(1)).replace("-", " ")}
-                            </Link>
+                                {(category.slice(0, 1).toUpperCase() + category.slice(1)).replace("-", " ")}
+                            </NavLink>
                         </li>
                     ))}
                 </ul>

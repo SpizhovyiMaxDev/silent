@@ -25,7 +25,7 @@ function Navbar(){
                     </li>
                     <li>
                         <NavLink to = "/categories" className={styles.navbarItem} onClick = {() => setNavState(false)}>  
-                            Products
+                            Categories
                         </NavLink>
                     </li>
                     <li>

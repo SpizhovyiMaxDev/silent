@@ -1,5 +1,4 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
-import ProductsList from "./modules/common/components/ProductsList/ProductsList"
 
 import Home from "./modules/pages/components/Home/Home"
 import Navbar from "./modules/sections/components/Navbar/Navbar"
@@ -9,10 +8,10 @@ import Cartpage from "./modules/pages/components/Cartpage/Cartpage"
 import Productpage from "./modules/pages/components/Productpage/Productpage"
 import PageEventListener from "./modules/pages/components/PageEventListener/PageEventListener"
 
+import ProductsList from "./modules/common/components/ProductsList/ProductsList"
 
 
 function App() {
-
   return (
     <>
         <BrowserRouter>
