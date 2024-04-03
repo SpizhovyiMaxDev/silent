@@ -16,28 +16,27 @@ function App() {
   return (
     <>
         <BrowserRouter>
-  <PageEventListener />
-  <Navbar />
-  <Routes>
-    <Route index element={<Navigate replace to="/home" />} />
-    <Route path="home" element={<Home />} />
-    <Route path="categories" element={<Productspage />}>
-      <Route index element={<Navigate replace to="all" />} />
-      <Route path="all" element={<ProductsList type="all" />} />
-      <Route path="jewelery" element={<ProductsList type="jewelery" />} />
-      <Route path="electronics" element={<ProductsList type="electronics" />} />
-      <Route path="men's-clothing" element={<ProductsList type="men's clothing" />} />
-      <Route path="women's-clothing" element={<ProductsList type="women's clothing" />} />
-    </Route>
-    <Route path="cart" element={<Cartpage />} />
-    <Route path="categories/jewelery/:id" element={<Productpage />} />
-    <Route path="categories/electronics/:id" element={<Productpage />} />
-    <Route path="categories/mens's-clothing/:id" element={<Productpage />} />
-    <Route path="categories/women's-clothing/:id" element={<Productpage />} />
-  </Routes>
-  <Footer />
-</BrowserRouter>
-
+        <PageEventListener />
+        <Navbar />
+        <Routes>
+          <Route path="home" element={<Home />} />
+          <Route index element={<Navigate replace to="/home" />} />
+          <Route path="categories" element={<Productspage />}>
+            <Route index element={<Navigate replace to="all" />} />
+            <Route path="all" element={<ProductsList type="all" />} />
+            <Route path="jewelery" element={<ProductsList type="jewelery" />} />
+            <Route path="electronics" element={<ProductsList type="electronics" />} />
+            <Route path="men's-clothing" element={<ProductsList type="men's clothing" />} />
+            <Route path="women's-clothing" element={<ProductsList type="women's clothing" />} />
+          </Route>
+          <Route path="cart" element={<Cartpage />} />
+          <Route path="categories/jewelery/:id" element={<Productpage />} />
+          <Route path="categories/electronics/:id" element={<Productpage />} />
+          <Route path="categories/men's-clothing/:id" element={<Productpage />} />
+          <Route path="categories/women's-clothing/:id" element={<Productpage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

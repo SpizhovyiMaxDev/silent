@@ -29,7 +29,7 @@ function CartItem({list, item, updateCart}){
                 </div>
 
                 <div className = {styles.cartItemContent}> 
-                    <Link className={styles.cartTitle} to={`/categories/${item.category}?title=${item.title}`}> 
+                    <Link className={styles.cartTitle} to={`/categories/${item.category.split(" ").join("-")}/${item.title}`}> 
                         {item.title}
                     </Link>
 

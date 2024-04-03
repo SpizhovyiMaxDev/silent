@@ -4,8 +4,7 @@
 
 .categoriesTitle{
     text-align: center;
-    font-size: 3.2rem;
-    font-family: "Inter";
+    font: 3.2rem "Inter";
     font-weight: 600;
     margin: 0 0 2rem;
 }
@@ -31,6 +30,7 @@
     color: var(--color-gray-dark);
     text-decoration: none;
     padding: 1rem 3rem;
+    display: inline-block;
     font: 2rem "Inter";
     font-weight: 500;
     transition: all 0.2s;
