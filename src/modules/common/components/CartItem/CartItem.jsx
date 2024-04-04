@@ -1,24 +1,30 @@
 import styles from './CartItem.module.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { round } from "../../../../functions/functions"
+
 
 function CartItem({list, item, updateCart}){
-    const navigate = useNavigate();
-    
-    function handleReplaceItem(){
-        handleRemoveItem();
-        navigate(`/categories/${item.category}?title=${item.title}`)
-    }
-
-    function handleRemoveItem(e) {
+    function updateList(e){
         let instruction = {type: "", value: 0};
+        let updatedCart = [];
         
-        const updatedCart = list.filter(function(product) {
-            const bool = product.title.includes(item.title);
-            if (bool) {
-                instruction = {type: "decrement", value: product.count};
-            }
-            return !bool;
-        });
+        if(+e.target.value !== 0){
+            instruction = {type: "pause", value: 0}
+            updatedCart = list.map(function(product) {
+                
+                const bool = product.title.includes(item.title);
+                if (bool) {
+                    product.quantity = +e.target.value;
+                }
+
+                return product;
+            });
+        } else {
+            updatedCart = list.filter(product => {
+             instruction = {type: "decrement", value: product.count}
+             return !product.title.includes(item.title)
+            });  
+        }
     
         updateCart(updatedCart, instruction);
     }
@@ -42,17 +48,19 @@ function CartItem({list, item, updateCart}){
                         Quantity: {item.quantity}
                     </p>
 
-                    <span onClick = {handleReplaceItem}>
-                        <ion-icon name="git-compare-outline"></ion-icon> Replace
-                    </span>
-                    <span onClick = {handleRemoveItem}>
-                        <ion-icon name="trash-outline"></ion-icon> Remove
-                    </span>
+
+                    <select className = {styles.quantitySelect} onChange={updateList} value={item.quantity}>
+                    {
+                        Array.from({length: 11}, (_, i) => {
+                            return  <option key = {i} value = {i}>QTY: {i}</option>
+                        })
+                    }
+                    </select>
                 </div>
 
                 <div className = {styles.cartPricingBox}>
                     <p className={styles.cartPrice}>
-                        {item.price}$
+                        {round(item.price * item.quantity)}$
                     </p>
                 </div>
         </div>

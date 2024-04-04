@@ -2,7 +2,7 @@ import styles from './Productquand.module.css'
 
 import { useState } from 'react';
 import { useApp } from '../../../../context/AppContext';
-
+import { round } from "../../../../functions/functions"
 
 function Productquant({ product }){
     const {status, updateCart, cart} = useApp();
@@ -65,16 +65,11 @@ function Productquant({ product }){
             <p className = {`${styles.notification} ${showNotif ? styles.visible : styles.hidden}`}>{message}</p>
             <div className={styles.productQuant}>
                 <select className = {styles.productSelection} onChange={handleSetQuantity}>
-                    <option value = {1}>1</option>
-                    <option value = {2}>2</option>
-                    <option value = {3}>3</option>
-                    <option value = {4}>4</option>
-                    <option value = {5}>5</option>
-                    <option value = {6}>6</option>
-                    <option value = {7}>7</option>
-                    <option value = {8}>8</option>
-                    <option value = {9}>9</option>
-                    <option value = {10}>10</option>
+                   {
+                    Array.from({length: 10}, (_, i) => {
+                        return  <option value = {i+1}>{i+1}</option>
+                    })
+                   }
                 </select>
                 <p className={styles.productQuantPrice}>  
                    Total: {currentPrice}$
@@ -94,9 +89,7 @@ function Productquant({ product }){
     )
 }
 
-function round(value){
-    return Number(value.toFixed(2));
-}
+
 
 
 export default Productquant;

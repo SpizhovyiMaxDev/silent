@@ -32,7 +32,7 @@
 .cartQuantity{
     font: 1.6rem "Inter";
     color: var(--color-gray-dark);
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
 }
 
 .cartRating{
@@ -52,13 +52,13 @@
     letter-spacing: 0.1px;
 }
 
-span{
-    display: block;
-    font-size: 1.8rem;
-    margin: 1rem 0;
-    cursor: pointer;
+.quantitySelect{
+    padding: 0.5rem 1rem;
+    font: 1.6rem "Inter";
+    border-radius: 1rem;
     color: var(--color-gray-dark);
 }
+
 
 @media (max-width: 35em){
     .cartItem{

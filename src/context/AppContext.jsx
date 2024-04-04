@@ -32,7 +32,7 @@ function reducer(state, action){
             return {
                 ...state, 
                 cart: action.payload.cart, 
-                countPurchase: action.payload.instruction.type === "increment" ?
+                countPurchase: action.payload.instruction.type === "increment"  ?
                 state.countPurchase + action.payload.instruction.value :
                 state.countPurchase - action.payload.instruction.value
             }
@@ -65,7 +65,7 @@ function AppContext({children}){
         })()
     }, [])
 
-    function updateCart(cart, instruction){
+    function updateCart(cart, instruction = "pause"){
         dispatch({type:"cart/update", payload: {cart, instruction}})
     }
 
