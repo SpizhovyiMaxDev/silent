@@ -45,8 +45,8 @@ function CartItem({cart, item, updateCart}){
                         Rating: {item.rating.rate}  <ion-icon name="star" style={{ color: '#ff8400' }}></ion-icon>
                     </p>
 
-                    <p className = {styles.cartQuantity}>
-                        Quantity: {item.quantity}
+                    <p className = {styles.cartDescription}>
+                        {item.description.split(" ").slice(0, 15).join(" ")}...
                     </p>
 
 

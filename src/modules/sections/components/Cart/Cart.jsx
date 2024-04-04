@@ -1,6 +1,7 @@
 import styles from './Cart.module.css';
 
 import { useApp } from '../../../../context/AppContext';
+import { round } from '../../../../functions/functions';
 
 import Button from '../../../common/components/Button/Button';
 import Container from '../../../common/components/Container/Container';
@@ -9,7 +10,7 @@ import CartList from '../../../common/components/CartList/CartList';
 
 function Cart() {
     const { updateCart, cart, error, status } = useApp();
-    const totalPrice = cart.reduce((acc, val) => acc + val.price, 0).toFixed(2);
+    const totalPrice = round(cart.reduce((acc, val) => acc + (val.price * val.quantity), 0));
 
     return (
         <section className={styles.cart}>

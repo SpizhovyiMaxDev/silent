@@ -29,10 +29,11 @@
     margin: 0 0 0.5rem;
 }
 
-.cartQuantity{
-    font: 1.6rem "Inter";
+.cartDescription{
+    font: 1.8rem "Inter";
     color: var(--color-gray-dark);
-    margin: 0 0 1rem;
+    width: 70%;
+    margin: 2rem 0;
 }
 
 .cartRating{
