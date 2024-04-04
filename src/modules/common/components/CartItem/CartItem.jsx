@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import { round } from "../../../../functions/functions"
 
 
-function CartItem({list, item, updateCart}){
+function CartItem({cart, item, updateCart}){
+
     function updateList(e){
         let instruction = {type: "", value: 0};
         let updatedCart = [];
         
         if(+e.target.value !== 0){
             instruction = {type: "pause", value: 0}
-            updatedCart = list.map(function(product) {
+            updatedCart = cart.map(function(product) {
                 
                 const bool = product.title.includes(item.title);
                 if (bool) {
@@ -20,7 +21,7 @@ function CartItem({list, item, updateCart}){
                 return product;
             });
         } else {
-            updatedCart = list.filter(product => {
+            updatedCart = cart.filter(product => {
              instruction = {type: "decrement", value: product.count}
              return !product.title.includes(item.title)
             });  

@@ -37,7 +37,7 @@ function Cart() {
                         <p className = {styles.priceHeading}>Price</p>
                     </div>
                     
-                    <CartList list = {cart} updateCart = {updateCart} /> 
+                    <CartList cart = {cart} updateCart = {updateCart} /> 
 
                     <div className = {styles.cartSubtotal}> 
                         <Button type = {"cta--green"} link = {"/categories"}>
