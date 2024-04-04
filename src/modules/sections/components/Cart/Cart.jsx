@@ -19,7 +19,7 @@ function Cart() {
                 {!cart.length && status !== "error" && 
                 <>
                     <div className={styles.emptyCart}>
-                        <div className={styles.emptyCartImageBox}>
+                        <div className={styles.emptyCartImageContainer}>
                             <img className = {styles.emptyCartImage} src="./empty-cart/empty-cart.webp" alt="Empty Cart" />
                         </div>
                         <h1 className={styles.emptyCartMessage}>
