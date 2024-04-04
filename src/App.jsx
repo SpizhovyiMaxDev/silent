@@ -5,7 +5,7 @@ import Navbar from "./modules/sections/components/Navbar/Navbar"
 import Footer from "./modules/sections/components/Footer/Footer"
 import PageEventListener from "./modules/pages/components/PageEventListener/PageEventListener"
 import ProductsList from "./modules/common/components/ProductsList/ProductsList"
-import PageLoader from "./modules/common/components/PageLoader/PageLoader"
+import PagesLoader from "./modules/common/components/PagesLoader/PagesLoader"
 
 
 // import Home from "./modules/pages/components/Home/Home"
@@ -25,7 +25,7 @@ function App() {
         <BrowserRouter>
         <PageEventListener />
         <Navbar />
-        <Suspense fallback = {<PageLoader>}>
+        <Suspense fallback = {<PagesLoader /> }>
         <Routes>
           <Route path="home" element={<Home />} />
           <Route index element={<Navigate replace to="/home" />} />
