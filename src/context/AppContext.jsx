@@ -32,7 +32,9 @@ function reducer(state, action){
             return {
                 ...state, 
                 cart: action.payload.cart, 
-                countPurchase:action.payload.count ? state.countPurchase - action.payload.count : state.countPurchase+1
+                countPurchase: action.payload.instruction.type === "increment" ?
+                state.countPurchase + action.payload.instruction.value :
+                state.countPurchase - action.payload.instruction.value
             }
         default: 
              throw new Error("Unknown Action, please ensure that this action is not valid")
@@ -63,8 +65,8 @@ function AppContext({children}){
         })()
     }, [])
 
-    function updateCart(cart, count = null){
-        dispatch({type:"cart/update", payload: {cart, count}})
+    function updateCart(cart, instruction){
+        dispatch({type:"cart/update", payload: {cart, instruction}})
     }
 
     return (

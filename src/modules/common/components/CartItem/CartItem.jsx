@@ -10,16 +10,17 @@ function CartItem({list, item, updateCart}){
     }
 
     function handleRemoveItem(e) {
-        let count = 0;
+        let instruction = {type: "", value: 0};
+        
         const updatedCart = list.filter(function(product) {
             const bool = product.title.includes(item.title);
             if (bool) {
-                count = product.count;
+                instruction = {type: "decrement", value: product.count};
             }
             return !bool;
         });
     
-        updateCart(updatedCart, count);
+        updateCart(updatedCart, instruction);
     }
 
     return (

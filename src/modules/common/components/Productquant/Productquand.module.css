@@ -6,9 +6,10 @@
     margin: 0 0 2rem;
 }
 
-.input{
+.productSelection{
     padding: 1rem 2rem;
     font-size: 2rem;
+    color: var(--color-black);
 }
 
 .notification.hidden {
@@ -16,7 +17,7 @@
     visibility: hidden;
     pointer-events: none;
     top:10%;
-    transition: all 0.5s ease;
+    transition: all 0.3s;
 }
 
 .notification.visible {
@@ -26,6 +27,7 @@
     top:20%;
     transition: all 0.5s; 
 }
+
 .notification {
     background: var(--color-metal);
     border-radius: .9rem;
