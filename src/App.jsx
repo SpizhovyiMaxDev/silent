@@ -1,14 +1,21 @@
+import { lazy, Suspense } from "react"
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
-import Home from "./modules/pages/components/Home/Home"
 import Navbar from "./modules/sections/components/Navbar/Navbar"
 import Footer from "./modules/sections/components/Footer/Footer"
-import Productspage from "./modules/pages/components/Productspage/Productspage"
-import Cartpage from "./modules/pages/components/Cartpage/Cartpage"
-import Productpage from "./modules/pages/components/Productpage/Productpage"
 import PageEventListener from "./modules/pages/components/PageEventListener/PageEventListener"
-
 import ProductsList from "./modules/common/components/ProductsList/ProductsList"
+
+
+// import Home from "./modules/pages/components/Home/Home"
+// import Productspage from "./modules/pages/components/Productspage/Productspage"
+// import Cartpage from "./modules/pages/components/Cartpage/Cartpage"
+// import Productpage from "./modules/pages/components/Productpage/Productpage"
+
+const Home = lazy(() => import("./modules/pages/components/Home/Home"));
+const Productspage = lazy(() => import("./modules/pages/components/Productspage/Productspage"));
+const Cartpage = lazy(() => import("./modules/pages/components/Cartpage/Cartpage"));
+const Productpage = lazy(()=>import("./modules/pages/components/Productpage/Productpage"));
 
 
 function App() {
@@ -17,6 +24,7 @@ function App() {
         <BrowserRouter>
         <PageEventListener />
         <Navbar />
+        <Suspense fallback = {<p>Loading</p>}>
         <Routes>
           <Route path="home" element={<Home />} />
           <Route index element={<Navigate replace to="/home" />} />
@@ -34,6 +42,7 @@ function App() {
           <Route path="categories/men's-clothing/:id" element={<Productpage />} />
           <Route path="categories/women's-clothing/:id" element={<Productpage />} />
         </Routes>
+        </Suspense>
         <Footer />
       </BrowserRouter>
     </>
