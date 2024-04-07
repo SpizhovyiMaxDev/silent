@@ -1,3 +1,3 @@
 export function round(value){
-    return Number(value.toFixed(2));
+    return Number(Math.floor(value).toFixed(2));
 }

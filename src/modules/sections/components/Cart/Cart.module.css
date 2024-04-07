@@ -23,14 +23,6 @@
     flex: 1.5;
 }
 
-.emptyCartMessage{
-    flex: 2;
-    font: 3.6rem "Roboto Condensed";
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--color-gray-dark);
-}
-
 /*--Cart--*/
 .cartSubtotal{
     padding: 4rem 0;
@@ -46,7 +38,7 @@
 }
 
 .totalPrice{
-    font: 2.4rem "Inter";
+    font-size: 2.4rem;
 }
 
 .cartBox{
@@ -58,13 +50,13 @@
 }
 
 .priceHeading{
-    font: 1.8rem "Inter";
+    font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0.3px;
 }
 
 .cartHeading{
-    font: 3.2rem "Inter";
+    font-size: 3.2rem;
     font-weight: 600;
 }
 
@@ -87,10 +79,6 @@
         display: none;
     }
     
-    .emptyCartMessage{
-        font-size: 2.4rem;
-    }
-
     .cartSubtotal{
         flex-direction: column;
         align-items: flex-start;

@@ -50,10 +50,10 @@ function CartItem({cart, item, updateCart}){
                     </p>
 
 
-                    <select className = {styles.quantitySelect} onChange={updateList} value={item.quantity}>
+                    <select className = {styles.quantitySelect} onChange={updateList} value={+item.quantity}>
                     {
                         Array.from({length: 11}, (_, i) => {
-                            return  <option key = {i} value = {i}>QTY: {i}</option>
+                            return  <option key = {i} value = {i}> {i === 0 ? "Delete":"QTY:"} {i}</option>
                         })
                     }
                     </select>
@@ -61,7 +61,7 @@ function CartItem({cart, item, updateCart}){
 
                 <div className = {styles.cartPricingBox}>
                     <p className={styles.cartPrice}>
-                        {round(item.price * item.quantity)}$
+                        {item.price }$
                     </p>
                 </div>
         </div>

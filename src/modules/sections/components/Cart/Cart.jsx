@@ -22,9 +22,9 @@ function Cart() {
                         <div className={styles.emptyCartImageContainer}>
                             <img className = {styles.emptyCartImage} src="./empty-cart/empty-cart.webp" alt="Empty Cart" />
                         </div>
-                        <h1 className={styles.emptyCartMessage}>
+                        <h2 className="heading-secondary">
                             Your Cart is still empty, 😉 keep searching a new products
-                        </h1>
+                        </h2>
                     </div>
                 </>
                 }

@@ -11,9 +11,9 @@ function Banner({image, title, description}){
                         <img src = {image} alt = {`Illustration for ${title}`} className = {styles.bannerImage}/> 
                 </div>
                 <div className = {styles.bannerContent}> 
-                        <h3 className = {styles.bannerTitle}>
+                        <h2 className = "heading--secondary">
                             {title}
-                        </h3>
+                        </h2>
                         <p className = {styles.bannerDescription}>
                             {description}
                         </p>

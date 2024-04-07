@@ -9,55 +9,19 @@ function Productquant({ product }){
     const [quantity, setQuantity] = useState(1);
     const currentPrice = status === "ready" ?  round(product.price * quantity) : 0;
     const [{showNotif, message}, setShowNotif] = useState({showNotif: false, message:""});
+    const index = cart.findIndex(p => p.title.includes(product.title));
 
     function handleSetQuantity(e){
         setQuantity(+e.target.value);
     }
 
     function handleAddProduct(){
-        let message = "";
-        let instruction = {type: "", value: 0};
-        let timer = 500;
+        updateCart({type:"cart/update", payload:{instructions:{type:"increase", value: 1}}});
 
-        const index = cart.findIndex(p => p.title.includes(product.title));
-        const updatedCart = [...cart];
-
-
-        if(index === -1){
-            
-            timer = 500;
-            instruction = {type: "increment", value: 1};
-            message = "Product successfuly delivered to the cart ✅";
-
-            const updatedProduct = {...product, quantity: quantity, price:currentPrice, count: 1};
-            updatedCart.push(updatedProduct);
-
-        } else if(index >= 0 && updatedCart[index].quantity < 10 && updatedCart[index].quantity + quantity <= 10){
-           
-            timer = 500;
-            instruction = {type: "increment", value: 1};
-            message = "Product successfuly delivered to the cart ✅";
-
-            updatedCart[index] = {
-                ...updatedCart[index],
-                quantity: updatedCart[index].quantity + quantity,
-                price: round(updatedCart[index].price + currentPrice),
-                count: updatedCart[index].count + 1,
-            };
-        } else {
-            timer = 1500;
-            instruction = {type: "pause", value: 0}
-            message = "💥You can't collect more then 10 products of the same type."
-        }
-
-        if(instruction.type !== "pause"){
-            updateCart(updatedCart, instruction);
-        }
-        
-        setShowNotif({showNotif: true, message});
+        setShowNotif({showNotif: true, message:"Product added to the cart ✅"});
         setTimeout(function(){
-            setShowNotif({showNotif: false,  message});
-        }, timer);
+            setShowNotif({showNotif: false,  message:"Product added to the cart ✅"});
+        }, 1000);
     }
 
     return (

@@ -2,9 +2,12 @@ import Hero from "../../../sections/components/Hero/Hero"
 import Banner from "../../../sections/components/Banner/Banner"
 import ProudProducts from "../../../sections/components/ProudProducts/ProudProducts"
 
+
+
 function Home(){
     return (
         <>
+    
             <Hero />
             <Banner 
                 image = {"./banner/banner.webp"} 
