@@ -40,6 +40,11 @@ html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
+@media (max-width: 72em){
+  html{
+    font-size:50%;
+  }
+}
 
 body{
   position: relative;
@@ -49,24 +54,17 @@ body{
 
 :root {
   --color-white: #fff;
+  --color-white-transparent: #ffffffe6;
   --color-green-dark: #347d36;
   --color-green-light: #265419;
   --color-black: #000;
-  --color-gray-dark: #333;
-  --color-gray-light: #e9e9e948;
-  --color-gray-medium: #bdbdbd;
-  --color-red: #ac2828;
-  --color-white-transparent: #ffffffe6;
-  --color-gray: #7D7D7D;
   --color-shadow:#00000021;
   --color-metal: #272525;
-}
-
-
-@media (max-width: 72em){
-  html{
-    font-size:50%;
-  }
+  --color-gray-dark: #333;
+  --color-gray-medium: #bdbdbd;
+  --color-gray-light: #e9e9e948;
+  --color-gray: #7D7D7D;
+  --color-red: #ac2828;
 }
 
 .container {
@@ -81,6 +79,26 @@ body{
   color: var(--color-black);
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+.description{
+  line-height: 1.5;
+  font-size: 1.8rem;
+  color:var(--color-gray-dark);
+}
+
+.btn--outline {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  transition: all 0.1s;
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn--outline:hover {
+  color: var(--color-white);
+  background: var(--color-black);
 }
 
 section, 

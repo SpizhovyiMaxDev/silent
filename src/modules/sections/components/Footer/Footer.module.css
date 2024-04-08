@@ -19,6 +19,11 @@
     font-weight: 500;
 }
 
+.footerLink:hover,
+.footerLink:active{
+    color: var(--color-gray-medium);
+}
+
 @media (max-width: 42em){
     .footerList{
         flex-direction: column;

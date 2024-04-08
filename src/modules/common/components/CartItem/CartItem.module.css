@@ -22,22 +22,25 @@
 
 .cartTitle {
     cursor: pointer;
-    font: 2rem "Inter";
+    font-size: 2.4rem;
+    font-weight: 500;
     color: var(--color-black);
     text-decoration: none;
     display: block;
-    margin: 0 0 0.5rem;
+    margin: 0 0 1rem;
 }
 
 .cartDescription{
-    font: 1.8rem "Inter";
-    color: var(--color-gray-dark);
     width: 70%;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    color: var(--color-dark);
     margin: 2rem 0;
 }
 
 .cartRating{
-    font: 1.8rem "Inter";
+    font-size: 2rem;
+    font-weight: 500;
     color: var(--color-gray-dark);
     margin: 0 0 1rem;
 }
@@ -48,14 +51,14 @@
 }
 
 .cartPrice{
-    font: 1.8rem "Inter";
+    font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0.1px;
 }
 
 .quantitySelect{
     padding: 0.5rem 1rem;
-    font: 1.6rem "Inter";
+    font-size: 1.6rem;
     border-radius: 1rem;
     color: var(--color-gray-dark);
 }

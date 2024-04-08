@@ -55,7 +55,7 @@ function AppContext({children}){
                 }
 
                 const data = await response.json();
-                const clearData = data.map(product => ({...product, title: product.title.replaceAll('/', ' '), quantity: 1, countClick: 0}));
+                const clearData = data.map(product => ({...product, title: product.title.replaceAll('/', ' '), quantity: 1}));
 
                 dispatch({type:"products/recieved", payload: clearData});
 

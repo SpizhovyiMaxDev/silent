@@ -25,13 +25,6 @@
     width: 50%;
 }
 
-
-.bannerDescription{
-    font-size: 1.8rem;
-    line-height: 1.5;
-    color:var(--color-gray-dark);
-}
-
 @media (max-width: 42em){
     .bannerImageContainer{
         display: none;

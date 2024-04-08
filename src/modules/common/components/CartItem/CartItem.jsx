@@ -1,6 +1,5 @@
 import styles from './CartItem.module.css'
 import { Link } from 'react-router-dom';
-import { round } from "../../../../functions/functions"
 
 
 function CartItem({cart, item, updateCart}){
@@ -22,8 +21,8 @@ function CartItem({cart, item, updateCart}){
             });
         } else {
             updatedCart = cart.filter(product => {
-             instruction = {type: "decrement", value: product.count}
-             return !product.title.includes(item.title)
+                instruction = {type: "decrement", value: 1}
+                return !product.title.includes(item.title)
             });  
         }
     
@@ -46,22 +45,23 @@ function CartItem({cart, item, updateCart}){
                     </p>
 
                     <p className = {styles.cartDescription}>
-                        {item.description.split(" ").slice(0, 15).join(" ")}...
+                        {item.description.split(" ").slice(0, 13).join(" ")}...
                     </p>
 
 
-                    <select className = {styles.quantitySelect} onChange={updateList} value={+item.quantity}>
-                    {
-                        Array.from({length: 11}, (_, i) => {
-                            return  <option key = {i} value = {i}> {i === 0 ? "Delete":"QTY:"} {i}</option>
-                        })
-                    }
+                    <select className={styles.quantitySelect} onChange={updateList} value={+item.quantity}>
+                        {Array.from({ length: 11 }, (_, i) => (
+                            <option key={i} value={i} selected={item.quantity === i ? "selected" : null}>
+                                {i === 0 ? "Delete" : `QTY: ${i}`}
+                            </option>
+                        ))}
                     </select>
+
                 </div>
 
                 <div className = {styles.cartPricingBox}>
                     <p className={styles.cartPrice}>
-                        {item.price }$
+                        {item.price*item.quantity}$
                     </p>
                 </div>
         </div>

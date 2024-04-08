@@ -14,7 +14,7 @@ function Banner({image, title, description}){
                         <h2 className = "heading--secondary">
                             {title}
                         </h2>
-                        <p className = {styles.bannerDescription}>
+                        <p className = "description">
                             {description}
                         </p>
 

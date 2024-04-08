@@ -27,7 +27,6 @@
     width: 85%;
     font-size: 1.8rem;
     line-height: 1.5;
-    font-family: "Inter";
     color: var(--color-gray-dark);
     margin-bottom: 2rem;
 }
@@ -46,11 +45,12 @@
 
 @media (max-width: 42em){
     .heroImage{
-     display: none;   
+     display: none;
     }
 
     .heroContainer{
         flex-direction: column-reverse;
+        text-align: center;
     }
 }
 

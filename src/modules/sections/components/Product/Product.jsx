@@ -39,7 +39,7 @@ function Product({products, error, status}){
                                 {product.description}
                             </p>
 
-                            <Productquant product = {product}/>
+                            <Productquant product = {product} />
                         </div>
                     </div>
                 }
