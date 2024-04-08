@@ -1,9 +1,9 @@
 import styles from './Button.module.css'
 import { Link } from 'react-router-dom'
 
-function Button({link, type, children}){
+function Button({link, type, handleClick = null, children}){
     return (
-        <Link className={styles[type]} to = {link}>{children}</Link>
+        <Link className={styles[type]} to = {link} onClick={handleClick&&handleClick} >{children}</Link>
     )
 }
 

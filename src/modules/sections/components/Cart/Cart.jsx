@@ -12,6 +12,11 @@ function Cart() {
     const { updateCart, cart, error, status } = useApp();
     const totalPrice = round(cart.reduce((acc, val) => acc + (val.price * val.quantity), 0));
 
+    function clearCart(e){
+        e.preventDefault();
+        updateCart([]);
+    }
+
     return (
         <section className={styles.cart}>
             <Container className={styles.cartContainer}>
@@ -49,6 +54,9 @@ function Cart() {
                             <p className = {styles.totalPrice}>Total: {totalPrice}$</p>
                             <Button type = {"cta--green"} link = {"#"}>
                                 Buy Now
+                            </Button>
+                            <Button type = {"cta--green"} link = {"#"} handleClick = {clearCart}>
+                                Clear Cart
                             </Button>
                         </div>
                     </div>

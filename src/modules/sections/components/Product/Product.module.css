@@ -21,7 +21,7 @@
 }
 
 .productImage {
-    width: 45%;
+    width: 50%;
     height: auto;
 }
 
@@ -78,10 +78,6 @@
 }
 
 @media (max-width: 42em) {
-    .productImage {
-        width: 60%;
-    }
-
     .productBox {
         flex-direction: column;
         gap: 4rem;
