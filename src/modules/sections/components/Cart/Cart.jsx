@@ -28,7 +28,7 @@ function Cart() {
                             <img className = {styles.emptyCartImage} src="./empty-cart/empty-cart.webp" alt="Empty Cart" />
                         </div>
                         <h2 className="heading-secondary">
-                            Your Cart is still empty, 😉 keep searching a new products
+                            Your Cart is still empty, 😉 keep searching for new products
                         </h2>
                     </div>
                 </>
