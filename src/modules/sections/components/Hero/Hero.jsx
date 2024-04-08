@@ -17,7 +17,7 @@ function Hero() {
                         blending style with unbeatable value.
                     </p>
                     <Button type={"cta--green"} link = {"/categories"}>
-                        Visit Our Blog <ion-icon name="arrow-forward-outline"></ion-icon>
+                        Our collection <ion-icon name="arrow-forward-outline"></ion-icon>
                     </Button>
                 </div>
                 <div className={styles.heroBox}>
