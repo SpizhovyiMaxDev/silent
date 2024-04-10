@@ -10,7 +10,7 @@ function ProductPage(){
     return (
         <>
             <Navbar />
-            <Product products={products} error = {error} status = {status}/> 
+            <Product products={products} error = {error} status = {status} /> 
             <Footer />
         </>
     )
