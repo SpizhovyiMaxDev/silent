@@ -47,7 +47,7 @@ function Product({ products, error, status }) {
                                     <ion-icon
                                         name="star"
                                         style={{ color: "#ff8400" }}
-                                        ></ion-icon>
+                                    ></ion-icon>
                                 </p>
                                 <p className={styles.productPrice}>
                                     {product.price}$

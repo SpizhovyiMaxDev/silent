@@ -1,13 +1,17 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
 const ContextContainer = createContext();
+
+const cartData = localStorage.getItem("cart");
+const cart = cartData ? JSON.parse(cartData) : [];
+
 const initialState = {
     status: "",
-    products:[],
+    products: [],
     error: "",
-    cart:[],
-    countPurchase:0,
-}
+    cart,
+    countPurchase: cart.length,
+};
 
 function reducer(state, action){
     switch(action.type){

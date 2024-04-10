@@ -14,7 +14,7 @@ function Cart() {
 
     function clearCart(e){
         e.preventDefault();
-        updateCart([]);
+        updateCart([], { type: "decrement", value: cart.length });
     }
 
     return (
