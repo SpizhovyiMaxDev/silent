@@ -1,5 +1,6 @@
 import styles from './CartItem.module.css'
 import { Link } from 'react-router-dom';
+import { round } from "../../../../functions/functions";
 
 
 function CartItem({cart, item, updateCart}){
@@ -61,7 +62,7 @@ function CartItem({cart, item, updateCart}){
 
                 <div className = {styles.cartPricingBox}>
                     <p className={styles.cartPrice}>
-                        {item.price*item.quantity}$
+                        {round(item.price*item.quantity)}$
                     </p>
                 </div>
         </div>
