@@ -58,3 +58,8 @@
     }
 }
 
+@media (max-width:28em) {
+    .divider{
+        display: none;
+    }
+}

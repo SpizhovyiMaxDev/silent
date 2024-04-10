@@ -26,7 +26,8 @@
 
 .cardTitle{
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.25;
     color: var(--color-gray-dark);
     margin: 0 0 1rem;
 }
