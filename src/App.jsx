@@ -1,11 +1,10 @@
 import { lazy, Suspense } from "react"
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
-import Navbar from "./modules/sections/components/Navbar/Navbar"
-import Footer from "./modules/sections/components/Footer/Footer";
 import PageEventListener from "./modules/pages/components/PageEventListener/PageEventListener"
 import ProductsList from "./modules/common/components/ProductsList/ProductsList"
 import PagesLoader from "./modules/common/components/PagesLoader/PagesLoader"
+import PageError from "./modules/common/components/PageError/PageError";
 
 const Home = lazy(() => import("./modules/pages/components/Home/Home"));
 const Productspage = lazy(() => import("./modules/pages/components/Productspage/Productspage"));
@@ -19,7 +18,6 @@ function App() {
         <BrowserRouter>
         <PageEventListener />
         <Suspense fallback = {<PagesLoader /> }>
-        <Navbar />
         <Routes>
           <Route path="home" element={<Home />} />
           <Route index element={<Navigate replace to="/home" />} />
@@ -36,8 +34,8 @@ function App() {
           <Route path="categories/electronics/:id" element={<Productpage />} />
           <Route path="categories/men's-clothing/:id" element={<Productpage />} />
           <Route path="categories/women's-clothing/:id" element={<Productpage />} />
+          <Route path = "*" element = {<PageError />} />
         </Routes>
-        <Footer />
         </Suspense>
       </BrowserRouter>
     </>

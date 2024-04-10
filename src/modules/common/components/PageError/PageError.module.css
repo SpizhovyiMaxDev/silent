@@ -1,0 +1,28 @@
+.errorBlock{
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+}
+
+.errorMessage{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: var(--color-gray-dark);
+}
+
+.errorMessage span{
+    margin-right: 1.5rem;
+    font-size: 4.4rem;
+    color: var(--color-black);
+}
+
+.errorLink:link, 
+.errorLink:visited{
+    color: var(--color-blue);
+}
+
+.errorLink:hover,
+.errorLink:active{
+    color: var(--color-light-blue);
+}

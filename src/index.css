@@ -65,6 +65,8 @@ body{
   --color-gray-light: #e9e9e948;
   --color-gray: #7D7D7D;
   --color-red: #ac2828;
+  --color-blue: #0055ff;
+  --color-light-blue: #006eff;
 }
 
 .container {
