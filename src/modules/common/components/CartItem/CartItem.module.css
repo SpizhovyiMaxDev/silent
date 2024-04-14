@@ -70,7 +70,6 @@
 
 
 @media (max-width: 35em){
-    
     .cartTextContainer, .cartPricingContainer, .cartImageContainer{
         flex:1;
     }
