@@ -19,6 +19,10 @@
     height: auto;
 }
 
+.emptyCartHeading{
+    width: 60%;
+}
+
 .emptyCartImageContainer{
     flex: 1.5;
 }
@@ -67,6 +71,11 @@
 }
 
 @media (max-width: 42em){
+    .emptyCartHeading{
+        width: 100%;
+    }
+
+
     .emptyCart{
         flex-direction: column;
         text-align: center;

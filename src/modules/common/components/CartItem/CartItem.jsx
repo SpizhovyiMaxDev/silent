@@ -35,7 +35,7 @@ function CartItem({cart, item, updateCart}){
                     <img className={styles.cartItemImage} src={item.image} alt={item.title} />
                 </div>
 
-                <div className = {styles.cartItemContent}> 
+                <div className = {styles.cartTextContainer}> 
                     <Link className={styles.cartTitle} to={`/categories/${item.category.split(" ").join("-")}/${item.title}`}> 
                         {item.title}
                     </Link>
@@ -59,7 +59,7 @@ function CartItem({cart, item, updateCart}){
 
                 </div>
 
-                <div className = {styles.cartPricingBox}>
+                <div className = {styles.cartPricingContainer}>
                     <p className={styles.cartPrice}>
                         {round(item.price*item.quantity)}$
                     </p>

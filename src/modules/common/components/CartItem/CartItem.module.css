@@ -11,8 +11,17 @@
     align-items: center;
 }
 
-.cartItemContent{
+.cartTextContainer{
     flex: 4;
+}
+
+.cartImageContainer{
+    flex:1;
+}
+
+.cartPricingContainer{
+    flex:1;
+    text-align: right;
 }
 
 .cartItemImage {
@@ -45,10 +54,6 @@
     margin: 0 0 1rem;
 }
 
-.cartPricingBox{
-    flex:1;
-    text-align: right;
-}
 
 .cartPrice{
     font-size: 1.8rem;
@@ -65,6 +70,11 @@
 
 
 @media (max-width: 35em){
+    
+    .cartTextContainer, .cartPricingContainer, .cartImageContainer{
+        flex:1;
+    }
+
     .cartItem{
         flex-direction: column;
         gap:3rem;
