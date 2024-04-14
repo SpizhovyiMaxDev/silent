@@ -9,6 +9,12 @@
 .cartImageContainer{
     display: flex;
     align-items: center;
+    max-width: 15rem;
+}
+
+.cartItemImage{
+    width: 100%;
+    height: auto;
 }
 
 .cartTextContainer{
@@ -19,10 +25,6 @@
     text-align: right;
 }
 
-.cartItemImage {
-    max-width: 15rem;
-    height: auto;
-}
 
 .cartTitle {
     cursor: pointer;
