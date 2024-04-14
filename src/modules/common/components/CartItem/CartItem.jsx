@@ -2,7 +2,6 @@ import styles from './CartItem.module.css'
 import { Link } from 'react-router-dom';
 import { round } from "../../../../functions/functions";
 
-
 function CartItem({cart, item, updateCart}){
 
     function updateList(e){
