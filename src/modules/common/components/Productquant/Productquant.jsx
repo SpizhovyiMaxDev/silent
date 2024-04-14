@@ -19,14 +19,12 @@ function Productquant({ product }){
 
     function handleAddProduct(){
         const updatedProduct = {...product, quantity}
-        localStorage.setItem("cart", JSON.stringify([...cart, updatedProduct]));
         updateCart([...cart, updatedProduct], {type:"increment", value: 1});
         callNotif("Product has been to the cart ✅", 500)
     }
 
     function handleRemoveProduct() {
         const updatedCart = cart.filter((_, i) => i !== index);
-        localStorage.setItem("cart", JSON.stringify([...cart, updatedCart]));
         updateCart(updatedCart, { type: "decrement", value: 1 });
         callNotif("Product has been removed the cart ❌", 500);
     }

@@ -22,7 +22,7 @@ function Product({ products, error, status }) {
                 {status === "ready" && (
                     <>
                         <div className = {styles.productLinks}> 
-                            <Link to = "/categories/all" className = {styles.productLink}>Back to Products</Link>
+                            <Link to = "/categories/all" className = {styles.productLink}>Our collection</Link>
                             <span>/</span>
                             <Link to = {link} className = {styles.productLink}>{linkTitle}</Link>
                         </div>

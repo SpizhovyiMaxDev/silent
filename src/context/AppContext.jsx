@@ -70,6 +70,7 @@ function AppContext({children}){
     }, [])
 
     function updateCart(cart, instruction = "pause"){
+        localStorage.setItem("cart", JSON.stringify(cart));
         dispatch({type:"cart/update", payload: {cart, instruction}})
     }
 
