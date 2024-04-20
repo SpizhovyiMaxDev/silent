@@ -2,7 +2,6 @@ import styles from './Product.module.css';
 import { memo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Loader from '../../../common/components/Loader/Loader';
-import Container from '../../../common/components/Container/Container';
 import ErrorMessage from '../../../common/components/ErrorMessage/ErrorMessage';
 import Productquant from '../../../common/components/Productquant/Productquant';
 
@@ -16,7 +15,7 @@ function Product({ products, error, status }) {
 
     return (
         <section className={styles.product}>
-            <Container>
+            <div className={styles.productContainer}>
                 {status === "loading" && <Loader />}
                 {status === "error" && <ErrorMessage message={error} />}
                 {status === "ready" && (
@@ -27,7 +26,7 @@ function Product({ products, error, status }) {
                             <Link to = {link} className = {styles.productLink}>{linkTitle}</Link>
                         </div>
 
-                        <div className={styles.productContainer}>
+                        <div className={styles.productBox}>
                             <div className={styles.productImageContainer}>
                                 <img
                                     className={styles.productImage}
@@ -61,7 +60,7 @@ function Product({ products, error, status }) {
                         </div>
                     </>
                 )}
-            </Container>
+            </div>
         </section>
     );
 }

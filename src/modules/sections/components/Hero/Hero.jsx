@@ -1,12 +1,11 @@
 import styles from './Hero.module.css';
 
 import Button from '../../../common/components/Button/Button';
-import Container from '../../../common/components/Container/Container';
 
 function Hero() {
     return (
         <section className={styles.hero}>
-            <Container className = {styles.heroContainer}>
+            <div className = {styles.heroContainer}>
                 <div className={styles.heroBox}>
                     <h1 className={styles.heroTitle}>
                         Explore Our Stunning New Season Arrivals Today
@@ -23,7 +22,7 @@ function Hero() {
                 <div className={styles.heroBox}>
                     <img src="./hero/hero.webp" alt="Hero of this section" className={styles.heroImage}/>
                 </div>
-            </Container>
+            </div>
         </section>
     );
 }

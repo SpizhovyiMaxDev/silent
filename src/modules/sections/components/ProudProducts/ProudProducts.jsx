@@ -1,6 +1,5 @@
 import styles from './ProudProducts.module.css';
 import { useApp }  from "../../../../context/AppContext";
-import Container from "../../../common/components/Container/Container";
 import ProductsList from "../../../common/components/ProductsList/ProductsList";
 import Loader from "../../../common/components/Loader/Loader";
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
@@ -11,7 +10,7 @@ function ProudProducts(){
 
     return (
         <section className = {styles.products}> 
-            <Container>
+            <div>
                 {status === "loading" && <Loader />}
                 {status === "ready" && (
                     <>
@@ -20,7 +19,7 @@ function ProudProducts(){
                     </>
                 )}
                 {status === "error" && <ErrorMessage message = {error} /> }
-            </Container>
+            </div>
         </section>
     )
 }

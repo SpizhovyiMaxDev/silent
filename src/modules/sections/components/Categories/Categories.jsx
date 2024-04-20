@@ -4,7 +4,6 @@ import { useApp } from "../../../../context/AppContext";
 import { NavLink, Outlet } from 'react-router-dom';
 
 import Loader from "../../../common/components/Loader/Loader"
-import Container from "../../../common/components/Container/Container";
 import ErrorMessage from "../../../common/components/ErrorMessage/ErrorMessage";
 
 
@@ -14,7 +13,7 @@ function Categories() {
 
     return (
         <section className={styles.categories}>
-            <Container>
+            <div>
                 {status === "loading" && <Loader />}
                 {status === "ready" && 
                 <>
@@ -40,7 +39,7 @@ function Categories() {
                 {status === "error" && <ErrorMessage message = {error} />}
 
                 <Outlet />
-            </Container>
+            </div>
         </section>
     );
 }

@@ -4,7 +4,6 @@ import { useApp } from '../../../../context/AppContext';
 import { round } from '../../../../functions/functions';
 
 import Button from '../../../common/components/Button/Button';
-import Container from '../../../common/components/Container/Container';
 import ErrorMessage from '../../../common/components/ErrorMessage/ErrorMessage';
 import CartList from '../../../common/components/CartList/CartList';
 
@@ -19,7 +18,7 @@ function Cart() {
 
     return (
         <section className={styles.cart}>
-            <Container className={styles.cartContainer}>
+            <div className={styles.cartContainer}>
                 {status === "error" && <ErrorMessage message = {error} />}
                 {!cart.length && status !== "error" && 
                 <>
@@ -33,7 +32,8 @@ function Cart() {
                     </div>
                 </>
                 }
-                {cart.length > 0 && 
+                
+                {cart.length > 0 && status !== "error" &&
                 <>
                     <div className = {styles.cartBox}>
                         <h2 className={styles.cartHeading}>
@@ -62,7 +62,7 @@ function Cart() {
                     </div>
                 </>
                 }
-            </Container>
+            </div>
         </section>
     );
 }

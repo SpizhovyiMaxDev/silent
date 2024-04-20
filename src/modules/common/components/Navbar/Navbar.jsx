@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { useApp } from '../../../../context/AppContext';
-import Container from "../Container/Container";
 
 function Navbar(){
     const [navState, setNavState] = useState(false);
@@ -12,7 +11,7 @@ function Navbar(){
 
     return (
         <nav className = {styles.navbar}>
-            <Container className = {`${styles.navbarContainer} ${navState ? styles.showMobileNav : ""}`}>
+            <div className = {`${styles.navbarContainer} ${navState ? styles.showMobileNav : ""}`}>
             <NavLink to = "/" className={styles.logotype}> 
                 Silent.ca
             </NavLink>
@@ -45,7 +44,7 @@ function Navbar(){
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
                 </div>
-            </Container>
+            </div>
         </nav>
     )
 }

@@ -3,12 +3,15 @@ import Categories from "../../../sections/components/Categories/Categories"
 
 import Navbar from "../../../common/components/Navbar/Navbar";
 import Footer from "../../../common/components/Footer/Footer";
+import Container from "../../../common/components/Container/Container";
 
 function Productspage(){
     return(
         <>
-        <Navbar />
-        <Categories /> 
+        <Container>
+            <Navbar />
+            <Categories /> 
+        </Container>
         <Footer />
         </>
     )
